@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 12:50:20 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/01 10:34:14 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/06/01 08:27:07 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/06/01 09:40:15 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
 
-char	*get_next_line(int fd)
+int	main(void)
 {
+	int	fd;
+	int	linhas = 6;
+
+	fd = open("teste.txt", O_RDONLY);
+	while (linhas--)	
+		printf("%s\n", get_next_line(fd));
+	return (0);
 }
