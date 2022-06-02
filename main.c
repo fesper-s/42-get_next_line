@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 08:27:07 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/01 09:40:15 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/02 14:52:11 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 int	main(void)
 {
 	int	fd;
-	int	linhas = 6;
+	char	*str;
 
-	fd = open("teste.txt", O_RDONLY);
-	while (linhas--)	
-		printf("%s\n", get_next_line(fd));
+	fd = open("./teste.txt", O_RDONLY);
+	str = get_next_line(fd);
+	printf("%s\n", str);
+	free(str);
 	return (0);
 }
