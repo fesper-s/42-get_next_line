@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 12:27:17 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/02 11:42:16 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/05 13:54:07 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
+size_t	ft_strlen(const char *s);
 
 #endif
