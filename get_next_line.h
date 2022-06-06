@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 12:27:17 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/05 13:54:07 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/06 13:21:41 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,9 @@
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
