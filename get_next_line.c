@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 12:50:20 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/06 14:14:52 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/07 08:39:09 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static char	*read_line(int fd, char *holder)
 {
 	char	*buffer;
-	size_t	b_size;
+	int		b_size;
 
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
@@ -24,7 +24,7 @@ static char	*read_line(int fd, char *holder)
 	while (!ft_strchr(holder, '\n') && b_size)
 	{
 		b_size = read(fd, buffer, BUFFER_SIZE);
-		if (b_size < 0)
+		if (b_size == -1)
 		{
 			free(buffer);
 			return (NULL);
@@ -39,11 +39,11 @@ static char	*read_line(int fd, char *holder)
 static char	*get_line(char *holder)
 {
 	char	*str;
-	size_t	len;
-	
-	if (!holder)
-		return (NULL);
+	int		len;
+
 	len = 0;
+	if (!holder[len])
+		return (NULL);
 	while (holder[len] && holder[len] != '\n')
 		len++;
 	str = malloc((len + 2) * sizeof(char));
@@ -66,8 +66,8 @@ static char	*get_line(char *holder)
 
 static char	*hold_line(char *holder)
 {
-	size_t	len;
-	size_t	i;
+	int		len;
+	int		i;
 	char	*str;
 
 	len = 0;
@@ -83,11 +83,11 @@ static char	*hold_line(char *holder)
 		return (NULL);
 	len++;
 	i = 0;
-   while (holder[len])
-	   str[i++] = holder[len++];
-   str[i] = '\0';
-   free(holder);
-   return (str);
+	while (holder[len])
+		str[i++] = holder[len++];
+	str[i] = '\0';
+	free(holder);
+	return (str);
 }
 
 char	*get_next_line(int fd)
