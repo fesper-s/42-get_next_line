@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 08:27:07 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/09 10:23:19 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/05/27 12:27:17 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/06/07 10:35:02 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stdio.h>
-#include <fcntl.h>
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int	main(void)
-{
-	int		fd;
-	char	*str;
-	char	*str2;
+# include <stdlib.h>
+# include <unistd.h>
 
-	fd = open("./teste.txt", O_RDONLY);
-	str = get_next_line(fd);
-	str2 = get_next_line(fd);
-	printf("%s", str);
-	printf("%s", str2);
-	free(str);
-	free(str2);
-	return (0);
-}
+char	*get_next_line(int fd);
+size_t	ft_strlen(const char *s);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strjoin(char *s1, char *s2);
+
+#endif
