@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 12:50:20 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/09 10:26:25 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/09 14:35:34 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,14 +95,14 @@ static char	*hold_line(char *holder)
 char	*get_next_line(int fd)
 {
 	char		*buffer;
-	static char	*holder;
+	static char	*holder[256];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	holder = read_line(fd, holder);
-	if (!holder)
+	holder[fd] = read_line(fd, holder[fd]);
+	if (!holder[fd])
 		return (NULL);
-	buffer = get_line(holder);
-	holder = hold_line(holder);
+	buffer = get_line(holder[fd]);
+	holder[fd] = hold_line(holder[fd]);
 	return (buffer);
 }
