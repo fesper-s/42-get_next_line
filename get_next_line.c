@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 12:50:20 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/09 10:26:25 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/13 14:02:26 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*read_line(int fd, char *holder)
 static char	*get_line(char *holder)
 {
 	char	*str;
-	int		len;
+	size_t	len;
 
 	len = 0;
 	if (!holder[len])
@@ -68,8 +68,8 @@ static char	*get_line(char *holder)
 
 static char	*hold_line(char *holder)
 {
-	int		len;
-	int		i;
+	size_t	len;
+	size_t	i;
 	char	*str;
 
 	len = 0;

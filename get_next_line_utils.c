@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 08:45:40 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/09 10:14:41 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/13 11:42:29 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	i = -1;
 	j = 0;
 	while (s1[++i])
-			new_str[i] = s1[i];
+		new_str[i] = s1[i];
 	while (s2[j])
 		new_str[i++] = s2[j++];
 	new_str[i] = '\0';
