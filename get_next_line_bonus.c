@@ -6,11 +6,11 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 12:50:20 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/13 14:02:41 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/14 11:22:04 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*read_line(int fd, char *holder)
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 08:45:40 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/09 10:14:41 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/06/14 11:11:22 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/06/14 11:22:21 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_utils.h"
 
 size_t	ft_strlen(const char *s)
 {
