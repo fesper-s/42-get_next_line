@@ -6,11 +6,11 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:11:22 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/06/14 11:22:21 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/06/14 11:31:44 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_utils.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {
