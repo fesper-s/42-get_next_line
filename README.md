@@ -1,2 +1,24 @@
 # get_next_line - 125% ✅
-May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects.
+get_next_line function, written in C, receives a file descriptor and returns the first line of the file. And it will returns the next line in a next call of get_next_line in main function for example.
+
+## Usage
+Example:
+```c
+#include <stdio.h>
+#include <fcntl.h>
+#include "get_next_line.h"
+
+int main(void)
+{
+  int   fd;
+  char  *line;
+  
+  fd = open("file.txt");    // get file descriptor of "file.txt"
+  line = get_next_line(fd); // get_next_line receives file descriptor and returns the first line to variable line
+  printf("%s\n", line);     // printing this line
+  line = get_next_line(fd); // this time returns the second line to variable line
+  printf("%s\n", line);     // printing the second line
+  free(line);
+  return (0);
+}
+```
