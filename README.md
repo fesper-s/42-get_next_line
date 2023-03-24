@@ -1,7 +1,7 @@
 <div align="center">
 <a><img height="120px" src="https://github.com/fesper-s/fesper-s/blob/main/src/42_badges/get_next_linem.png"></a>
 
-# get_next_line - 125% ✅
+# get_next_line - 125% ⭐️
 </div>
 get_next_line function, written in C, receives a file descriptor and returns the first line of the file. And it will returns the next line in a next call of get_next_line in main function for example.
 
